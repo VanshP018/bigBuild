@@ -1,0 +1,11 @@
+{
+  "name": "@bigbuild/api",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "node -e \"console.log('api workspace is ready')\"",
+    "check": "node -e \"console.log('api workspace check passed')\"",
+    "dev": "node -e \"console.log('api workspace placeholder; FastAPI will be added in a later task')\"",
+    "format": "node -e \"console.log('api workspace has no source files to format yet')\""
+  }
+}

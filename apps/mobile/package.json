@@ -1,0 +1,11 @@
+{
+  "name": "@bigbuild/mobile",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "node -e \"console.log('mobile workspace is ready')\"",
+    "check": "node -e \"console.log('mobile workspace check passed')\"",
+    "dev": "node -e \"console.log('mobile workspace placeholder; Expo will be added in a later task')\"",
+    "format": "node -e \"console.log('mobile workspace has no source files to format yet')\""
+  }
+}
