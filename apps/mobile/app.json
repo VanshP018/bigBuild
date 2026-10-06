@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "BigBuild Mobile",
+    "slug": "bigbuild-mobile",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light"
+  }
+}

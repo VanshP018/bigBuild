@@ -1,10 +1,10 @@
 # Phase 0: Foundation
 
-Phase 0 prepares the local development environment and repository structure for BigBuild. It does not implement product behavior.
+Phase 0 prepares the local development environment, repository structure, and mobile application foundation for BigBuild. It does not implement product behavior.
 
 ## Goal
 
-Make the project ready for incremental development while keeping the mobile app and API as placeholders. This foundation reduces setup friction and gives future work clear ownership boundaries.
+Make the project ready for incremental development while keeping the API as a placeholder and the mobile app intentionally minimal. This foundation reduces setup friction and gives future work clear ownership boundaries.
 
 ## Completed Sub-parts
 
@@ -57,9 +57,25 @@ This sub-part includes:
 
 **Verification:** `pnpm install`, `pnpm check`, `pnpm build`, and `pnpm dev` completed successfully for the foundation placeholders.
 
+### 0.3 Mobile application foundation
+
+We replaced the mobile workspace placeholder with a minimal Expo SDK 57 application using React Native and TypeScript. The workspace now includes:
+
+- Expo app metadata and a TypeScript configuration
+- An Expo entrypoint using `registerRootComponent`
+- A minimal screen proving the app starts
+- Expo StatusBar support
+- Metro configuration based on Expo's workspace-aware defaults for the pnpm/Turborepo monorepo
+- Mobile scripts for `start`, `dev`, `ios`, and `android`
+- TypeScript validation through the mobile `check` and `build` scripts
+
+**Why:** Establish a runnable mobile shell and verify monorepo resolution before adding any product behavior.
+
+**Verification:** `pnpm install`, `pnpm --filter @bigbuild/mobile check`, `pnpm --filter @bigbuild/mobile exec expo config --type public`, `pnpm check`, and `pnpm build` completed successfully.
+
 ## Intentionally Deferred
 
-Phase 0 does not add AI, nutrition, workout logic, onboarding, food logging, notifications, user memory, adaptation, authentication, database schemas, Supabase integration, FastAPI endpoints, or Expo screens.
+Phase 0 does not add AI, nutrition, workout logic, onboarding, food logging, notifications, user memory, adaptation, authentication, database schemas, Supabase integration, FastAPI endpoints, or additional product screens.
 
 ## Continuing Phase 0
 

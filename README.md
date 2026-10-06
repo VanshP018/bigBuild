@@ -7,7 +7,7 @@ Foundation monorepo for the BigBuild AI personal health coach application.
 This repository currently contains only the Phase 0 foundation:
 
 - Turborepo workspace configuration
-- Mobile application workspace placeholder
+- Expo TypeScript mobile application foundation
 - API workspace placeholder
 - Shared types workspace placeholder
 - Infrastructure directory
@@ -54,7 +54,13 @@ Run the foundation build:
 pnpm build
 ```
 
-Run all workspace development placeholders:
+Run the mobile Expo development server:
+
+```bash
+pnpm --filter @bigbuild/mobile dev
+```
+
+Run all workspace development tasks:
 
 ```bash
 pnpm dev

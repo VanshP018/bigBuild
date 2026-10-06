@@ -3,9 +3,22 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "build": "node -e \"console.log('mobile workspace is ready')\"",
-    "check": "node -e \"console.log('mobile workspace check passed')\"",
-    "dev": "node -e \"console.log('mobile workspace placeholder; Expo will be added in a later task')\"",
-    "format": "node -e \"console.log('mobile workspace has no source files to format yet')\""
+    "android": "expo start --android",
+    "build": "tsc --noEmit",
+    "check": "tsc --noEmit",
+    "dev": "expo start",
+    "format": "node -e \"console.log('mobile foundation has no formatter configured yet')\"",
+    "ios": "expo start --ios",
+    "start": "expo start"
+  },
+  "dependencies": {
+    "expo": "~57.0.26",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-native": "0.86.3"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.2",
+    "typescript": "~6.0.3"
   }
 }
