@@ -8,7 +8,7 @@ This repository currently contains only the Phase 0 foundation:
 
 - Turborepo workspace configuration
 - Expo TypeScript mobile application foundation
-- API workspace placeholder
+- FastAPI backend foundation
 - Shared types workspace placeholder
 - Infrastructure directory
 
@@ -31,8 +31,9 @@ This repository uses pnpm 10 because it provides reliable workspace support and 
 
 - Node.js 22 LTS or newer supported LTS release
 - pnpm 10
+- Python 3.11 or newer for the API
 
-Python, Expo, FastAPI, Supabase, PostgreSQL, and native mobile tooling are intentionally not configured in this foundation task.
+Supabase, PostgreSQL, authentication, and product features are intentionally not configured in this foundation task.
 
 ## Commands
 
@@ -58,6 +59,12 @@ Run the mobile Expo development server:
 
 ```bash
 pnpm --filter @bigbuild/mobile dev
+```
+
+Run the API development server after creating and activating `apps/api/.venv`:
+
+```bash
+pnpm --filter @bigbuild/api dev
 ```
 
 Run all workspace development tasks:

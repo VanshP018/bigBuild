@@ -1,0 +1,1 @@
+"""Domain logic independent of HTTP and persistence concerns."""

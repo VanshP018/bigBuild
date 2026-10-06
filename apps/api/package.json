@@ -3,9 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "build": "node -e \"console.log('api workspace is ready')\"",
-    "check": "node -e \"console.log('api workspace check passed')\"",
-    "dev": "node -e \"console.log('api workspace placeholder; FastAPI will be added in a later task')\"",
-    "format": "node -e \"console.log('api workspace has no source files to format yet')\""
+    "build": "python3 -m compileall -q app",
+    "check": "python3 -m compileall -q app",
+    "dev": "uvicorn app.main:app --reload --host 0.0.0.0 --port 8000",
+    "format": "python3 -m compileall -q app"
   }
 }

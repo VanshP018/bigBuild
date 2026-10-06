@@ -73,6 +73,16 @@ We replaced the mobile workspace placeholder with a minimal Expo SDK 57 applicat
 
 **Verification:** `pnpm install`, `pnpm --filter @bigbuild/mobile check`, `pnpm --filter @bigbuild/mobile exec expo config --type public`, `pnpm check`, and `pnpm build` completed successfully.
 
+### 0.4 API backend foundation
+
+We replaced the API workspace placeholder with a virtual-environment-friendly FastAPI project using Python, Pydantic, and Uvicorn. The backend now has separate routes, services, domain, database boundary, configuration, schemas, and error-handling modules.
+
+The foundation includes a typed `GET /api/v1/health` endpoint, local-development CORS settings, environment-based configuration, and a generic error response shape. The database module is intentionally only a boundary; it does not connect to a database.
+
+**Why:** Establish a stable backend application boundary before adding authentication, persistence, AI, or product domain logic.
+
+**Verification:** Python compilation, Pylance diagnostics, `pnpm check`, and `pnpm build` completed successfully. Live dependency installation was not completed on this machine because Homebrew Python 3.12.15 reports empty macOS version metadata to pip on macOS 26.2.
+
 ## Intentionally Deferred
 
 Phase 0 does not add AI, nutrition, workout logic, onboarding, food logging, notifications, user memory, adaptation, authentication, database schemas, Supabase integration, FastAPI endpoints, or additional product screens.
